@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="students")
-public class douglasStudent {
+public class DouglasStudent {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -17,14 +17,24 @@ public class douglasStudent {
 	private String studentFirstName; 
 	private String studentLastName; 
 	private String studentProgram;
+	private String studentEmail; 
 	
-	public douglasStudent() {}
+	public DouglasStudent() {}
 	
-	public douglasStudent( String studentFirstName, String studentLastName, String studentProgram) {
+	public DouglasStudent( String studentFirstName, String studentLastName, String studentProgram, String studentEmail) {
 		super();
 		this.studentFirstName = studentFirstName;
 		this.studentLastName = studentLastName;
 		this.studentProgram = studentProgram;
+		this.studentEmail = studentEmail; 
+	}
+
+	public String getStudentEmail() {
+		return studentEmail;
+	}
+
+	public void setStudentEmail(String studentEmail) {
+		this.studentEmail = studentEmail;
 	}
 
 	public Long getId() {
