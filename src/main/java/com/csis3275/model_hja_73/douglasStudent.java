@@ -40,30 +40,39 @@ public class DouglasStudent {
 	public Long getId() {
 		return id;
 	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
 	public int getStudentID() {
 		return studentID;
 	}
+	
 	public void setStudentID(int studentID) {
 		this.studentID = studentID;
 	}
+	
 	public String getStudentFirstName() {
 		return studentFirstName;
 	}
+	
 	public void setStudentFirstName(String studentFirstName) {
 		this.studentFirstName = studentFirstName;
 	}
+	
 	public String getStudentLastName() {
 		return studentLastName;
 	}
+	
 	public void setStudentLastName(String studentLastName) {
 		this.studentLastName = studentLastName;
 	}
+	
 	public String getStudentProgram() {
 		return studentProgram;
 	}
+	
 	public void setStudentProgram(String studentProgram) {
 		this.studentProgram = studentProgram;
 	} 
