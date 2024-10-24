@@ -8,7 +8,7 @@ const ExamTable = ({ examData }) => {
 
   return (
     
-    <div className="flex flex-col mt-20">
+    <div className="flex flex-col">
       <div className="overflow-x-auto">
         <div className="p-1.5 w-full inline-block align-middle">
           <div className="overflow-hidden border rounded-lg">

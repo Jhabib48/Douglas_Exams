@@ -8,15 +8,23 @@ import ExamFilter from './components/exmaPage/examFilter';
 function App() {
 
   const [exams, setExams] = useState([]);
-
+  const [student, setStudent]  = useState([]); 
+  
   useEffect(()=>{
         const fetchExams = async () => {
             try{
-              const response = await fetch("http://localhost:8080/exam/schedule")
-              const data = await response.json(); 
+              //Web scarpping exam data
+              const examResponse = await fetch("http://localhost:8080/exam/schedule")
+              const examData = await examResponse.json(); 
               console.log("Data");
-              console.log(data); 
-              setExams(data);
+              console.log(examData); 
+              setExams(examData);
+
+              // Student account data 
+              const studentResponse = await fetch("http://localhost:8080/students/list")
+              const studentData = await studentResponse.json(); 
+              console.log("Student"); 
+              console.log(studentData); 
 
             }
             catch(error){
@@ -28,14 +36,13 @@ function App() {
 
   return (
      <div>
-        {/* <NavBar /> */}
+        <NavBar />
         <ExamFilter examList={exams}/>
-        
-        {/* <ExamTable examData={exams}/> */}
-
+        <ExamTable examData={exams}/>
+        {/* <Hero/> */}
      </div>
       
-       //<Hero/>
+      
        
 
   );

@@ -20,7 +20,7 @@ const ExamFilter = ({ examList }) => {
     };
 
     return (
-        <div className="mt-10 flex items-center justify-between">
+        <div className="mt-20 flex items-center justify-between">
             <div>
                 <h2 className="text-[30px] font-bold">Exam Catalog</h2>
                 <h2>Explore Exams</h2>
