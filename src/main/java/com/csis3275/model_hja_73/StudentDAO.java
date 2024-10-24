@@ -12,7 +12,7 @@ public class StudentDAO {
 	@Autowired
 	IStudentRepository studentRepo; 
 	
-	//Read
+	//READ
 	public List<DouglasStudent> readDouglasStudent(){
 		return (List<DouglasStudent>) studentRepo.findAll();
 	}

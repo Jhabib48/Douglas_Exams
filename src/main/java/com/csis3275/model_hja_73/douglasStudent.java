@@ -67,7 +67,4 @@ public class DouglasStudent {
 	public void setStudentProgram(String studentProgram) {
 		this.studentProgram = studentProgram;
 	} 
-	
-	
-
 }
