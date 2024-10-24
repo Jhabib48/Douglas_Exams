@@ -18,7 +18,7 @@ public class DouglasExamProjectApplication {
 	@Bean
 	CommandLineRunner douglasStudentData( StudentDAO doa) {
 		return (args) -> {
-			doa.addDouglasStudent( new DouglasStudent("John", "Doe", "CSIS", "test@hotmail.ca")); 
+			doa.addDouglasStudent( new DouglasStudent(30013349,"John", "Doe", "CSIS", "test@hotmail.ca")); 
 		}; 
 	}
 

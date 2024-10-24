@@ -21,12 +21,13 @@ public class DouglasStudent {
 	
 	public DouglasStudent() {}
 	
-	public DouglasStudent( String studentFirstName, String studentLastName, String studentProgram, String studentEmail) {
+	public DouglasStudent( int studentID, String studentFirstName, String studentLastName, String studentProgram, String studentEmail) {
 		super();
 		this.studentFirstName = studentFirstName;
 		this.studentLastName = studentLastName;
 		this.studentProgram = studentProgram;
 		this.studentEmail = studentEmail; 
+		this.studentID = studentID; 
 	}
 
 	public String getStudentEmail() {
