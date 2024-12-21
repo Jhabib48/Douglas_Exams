@@ -30,9 +30,9 @@ const NavBar = () => {
                       <Link to='/paymentForm'>LOGIN</Link>
                   </li> */}
                   <li className='md:ml-8 text-xl md:my-0 my-7'>
-                      <Link to='/admin'>Exams</Link>
+                      <Link to='/exams'>Exams</Link>
                   </li>
-                  <Button><Link to="/login">Get Started</Link></Button>
+                  <Button><Link to="/login">Login</Link></Button>
               </ul>
           </div>
       </div>
