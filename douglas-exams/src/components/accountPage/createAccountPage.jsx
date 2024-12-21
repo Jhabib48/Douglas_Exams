@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 
 const CreateAccount = () => {
   return (
@@ -73,7 +74,9 @@ const CreateAccount = () => {
             Create an account
           </button>
         </div>
-        <p class="text-gray-800 text-sm mt-6 text-center">Already have an account? <a href="javascript:void(0);" class="text-blue-600 font-semibold hover:underline ml-1">Login here</a></p>
+        <Link to='/login'>
+          <p class="text-gray-800 text-sm mt-6 text-center">Already have an account? <a href="javascript:void(0);" class="text-blue-600 font-semibold hover:underline ml-1">Login here</a></p>
+        </Link>
       </form>
     </div>
   </div>
