@@ -2,8 +2,7 @@ import {useState} from 'react';
 import Button from "./button";
 import { FaList } from 'react-icons/fa';
 import {Link} from 'react-router-dom'
-import React, { useRef } from 'react';
-
+import React, { useRef } from 'react'
 
 const NavBar = () => {
   let [open, setOpen] =useState(false);
@@ -15,7 +14,7 @@ const NavBar = () => {
                   text=gray-800' >
                       <Link to='/'>
                           <span className='text-3xle font-bold'>
-                          <p>DOUGLAS EXAM</p>
+                          <p >DOUGLAS EXAM</p>
                           </span>
                       </Link>
               </div>

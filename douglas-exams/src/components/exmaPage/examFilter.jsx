@@ -22,8 +22,8 @@ const ExamFilter = ({ examList }) => {
     return (
         <div className="mt-20 flex items-center justify-between">
             <div>
-                <h2 className="text-[30px] font-bold">Exam Catalog</h2>
-                <h2>Explore Exams</h2>
+                <h2 className="text-[30px] font-bold ml-10">Exam Catalog</h2>
+                <h2 className="ml-10">Explore Exams</h2>
             </div>
             <div className="flex gap-5 mr-4">
                 <select className="select select-bordered w-full md:block max-w-xs hidden">

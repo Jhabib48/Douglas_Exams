@@ -4,6 +4,8 @@ import NavBar from './components/navBar/navBar';
 import Hero from './components/home/hero';
 import ExamTable from './components/exmaPage/examTables';
 import ExamFilter from './components/exmaPage/examFilter';
+import CreateAccount from './components/accountPage/createAccountPage';
+import Login from './components/accountPage/login';
 
 function App() {
 
@@ -37,9 +39,12 @@ function App() {
   return (
      <div>
         <NavBar />
-        <ExamFilter examList={exams}/>
-        <ExamTable examData={exams}/>
+        {/* <CreateAccount/> */}
         {/* <Hero/> */}
+        {/* <ExamFilter examList={exams}/>
+        <ExamTable examData={exams}/> */}
+        {/* <Hero/> */}
+        <Login/>
      </div>
       
       
