@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import {Route, Routes, useNavigate} from 'react-router-dom'
 import NavBar from './components/navBar/navBar';
 import Hero from './components/home/hero';
-import ExamTable from './components/exmaPage/examTables';
-import ExamFilter from './components/exmaPage/examFilter';
 import CreateAccount from './components/accountPage/createAccountPage';
 import Login from './components/accountPage/login';
 import Exams from './components/exmaPage/exam';

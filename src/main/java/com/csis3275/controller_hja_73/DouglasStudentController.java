@@ -13,7 +13,7 @@ import com.csis3275.model_hja_73.StudentDAO;
 // This is for student data stored for login 
 
 @RestController
-@RequestMapping("/students")
+@RequestMapping("/users")
 public class DouglasStudentController {
 
 	@Autowired

@@ -45,7 +45,6 @@ public class StudentDAO {
 			studentToUpdate.setStudentEmail(data.getStudentEmail());
 			studentToUpdate.setStudentFirstName(data.getStudentFirstName());
 			studentToUpdate.setStudentLastName(data.getStudentLastName());
-			studentToUpdate.setStudentProgram(data.getStudentProgram());
 			return studentRepo.save(studentToUpdate);
 		}
 		else

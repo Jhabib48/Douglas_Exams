@@ -16,18 +16,26 @@ public class DouglasStudent {
 	private int studentID; 
 	private String studentFirstName; 
 	private String studentLastName; 
-	private String studentProgram;
+	private String studentPassword; 
 	private String studentEmail; 
 	
 	public DouglasStudent() {}
 	
-	public DouglasStudent( int studentID, String studentFirstName, String studentLastName, String studentProgram, String studentEmail) {
+	public DouglasStudent( int studentID, String studentFirstName, String studentLastName, String password, String studentEmail) {
 		super();
 		this.studentFirstName = studentFirstName;
 		this.studentLastName = studentLastName;
-		this.studentProgram = studentProgram;
 		this.studentEmail = studentEmail; 
 		this.studentID = studentID; 
+		this.studentPassword = password; 
+	}
+
+	public String getStudentPassword() {
+		return studentPassword;
+	}
+
+	public void setStudentPassword(String studentPassword) {
+		this.studentPassword = studentPassword;
 	}
 
 	public String getStudentEmail() {
@@ -70,11 +78,4 @@ public class DouglasStudent {
 		this.studentLastName = studentLastName;
 	}
 	
-	public String getStudentProgram() {
-		return studentProgram;
-	}
-	
-	public void setStudentProgram(String studentProgram) {
-		this.studentProgram = studentProgram;
-	} 
 }
