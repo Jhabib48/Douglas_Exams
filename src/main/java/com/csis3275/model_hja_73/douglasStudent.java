@@ -13,7 +13,6 @@ public class DouglasStudent {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id; 
-	private int studentID; 
 	private String studentFirstName; 
 	private String studentLastName; 
 	private String studentPassword; 
@@ -21,12 +20,11 @@ public class DouglasStudent {
 	
 	public DouglasStudent() {}
 	
-	public DouglasStudent( int studentID, String studentFirstName, String studentLastName, String password, String studentEmail) {
+	public DouglasStudent( String studentFirstName, String studentLastName, String password, String studentEmail) {
 		super();
 		this.studentFirstName = studentFirstName;
 		this.studentLastName = studentLastName;
 		this.studentEmail = studentEmail; 
-		this.studentID = studentID; 
 		this.studentPassword = password; 
 	}
 
@@ -52,14 +50,6 @@ public class DouglasStudent {
 	
 	public void setId(Long id) {
 		this.id = id;
-	}
-	
-	public int getStudentID() {
-		return studentID;
-	}
-	
-	public void setStudentID(int studentID) {
-		this.studentID = studentID;
 	}
 	
 	public String getStudentFirstName() {

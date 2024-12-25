@@ -5,6 +5,8 @@ import Hero from './components/home/hero';
 import CreateAccount from './components/accountPage/createAccountPage';
 import Login from './components/accountPage/login';
 import Exams from './components/exmaPage/exam';
+import ExamFilter from './components/exmaPage/examFilter';
+import ExamTable from './components/exmaPage/examTables';
 
 function App() {
 
@@ -16,27 +18,30 @@ function App() {
   const [logged, setLogged] = useState(false); 
 
   useEffect(()=>{
-        const fetchExams = async () => {
-            try{
-              //Web scarpping exam data
-              const examResponse = await fetch("http://localhost:8080/exam/schedule")
-              const examData = await examResponse.json(); 
-              console.log("Data");
-              console.log(examData); 
-              setExams(examData);
+    const fetchExams = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/exam/schedule");
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await response.json();
+        setExams(data);
+      } catch (error) {
+        console.error("Error fetching exams:", error);
+      }
+    };
 
-              // Student account data 
-              const studentResponse = await fetch("http://localhost:8080/students/list")
-              const studentData = await studentResponse.json(); 
-              console.log("Student"); 
-              console.log(studentData); 
-
-            }
-            catch(error){
-              console.log("Error while fetching Exam data: " + error);
-            }
-        }; 
-        fetchExams(); 
+    const fetchStudents = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/students/list");
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await response.json();
+        setStudent(data);
+      } catch (error) {
+        console.error("Error fetching student data:", error);
+      }
+    };
+  
+    fetchExams();
+    fetchStudents();
   }, [])
 
   return (

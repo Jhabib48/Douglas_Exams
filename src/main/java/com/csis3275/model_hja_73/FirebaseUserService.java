@@ -36,6 +36,19 @@ public class FirebaseUserService {
 	}
 	
 	public UserRecord createUserWithDetails( String email, String password, String fullName, String id) throws Exception {
+//		if (email == null || email.trim().isEmpty()) {
+//	        throw new IllegalArgumentException("Email cannot be null or empty");
+//	    }
+//	    if (password == null || password.length() < 6) {
+//	        throw new IllegalArgumentException("Password must be at least 6 characters long");
+//	    }
+//	    if (fullName == null || fullName.trim().isEmpty()) {
+//	        throw new IllegalArgumentException("Full name cannot be null or empty");
+//	    }
+//	    if (id == null || id.trim().isEmpty()) {
+//	        throw new IllegalArgumentException("Student ID cannot be null or empty");
+//	    }
+		
 		UserRecord.CreateRequest request = new UserRecord.CreateRequest()
 				.setEmail(email)
 				.setPassword(password); 
@@ -68,7 +81,6 @@ public class FirebaseUserService {
 	        
 	        student.setStudentFirstName(((String) data.get("fullName")).split(" ")[0]);
 	        student.setStudentLastName(((String) data.get("fullName")).split(" ")[1]);
-	        student.setStudentID(Integer.parseInt((String) data.get("studentId")));
 	        student.setStudentEmail((String) data.get("email"));
 
 	        return student;

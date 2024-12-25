@@ -18,7 +18,7 @@ public class WebScapingController_hja_73 {
 	WebScrapingService_hja_73 webScrapingService;
 	
 	@GetMapping("/schedule")
-	public List<Exam> getExamSchedule()throws IOException{
+	public List<Exam> getExamSchedule() throws IOException{
 		return webScrapingService.scapeExamData();
 	}
 }
