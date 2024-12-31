@@ -7,6 +7,7 @@ import Login from './components/accountPage/login';
 import Exams from './components/exmaPage/exam';
 import ExamFilter from './components/exmaPage/examFilter';
 import ExamTable from './components/exmaPage/examTables';
+import axios from "axios";
 
 function App() {
 
@@ -44,6 +45,44 @@ function App() {
     fetchStudents();
   }, [])
 
+
+  const createStudentAccount = async (studentFirstName, studentLastName, studentPassword, studentEmail) => {
+    const url = 'http://localhost:8080/students/add'
+
+    try{
+      const newStudent = {
+        studentFirstName, 
+        studentLastName, 
+        studentPassword, 
+        studentEmail
+      }
+      const {data, status} = await axios.post(url, newStudent); 
+      
+      if(status == 200){
+        console.log(data); 
+        setStudent([...student, data]); 
+      }
+
+    }catch(error){
+        console.log("Error when adding new user: " + error); 
+      }
+  }
+
+
+  // This is used for checking is user exits to log in 
+  // and this also is used for checking if the details of new user exist, mainly the email
+  const checkIfStudentExist = async (studentEmail, studentPassword)=>{
+    const ifStudentExist = student.some( student => student.studentEmail == studentEmail && student.studentPassword == studentPassword); 
+    if(ifStudentExist){
+      console.log("Student exist!")
+    }
+    else{
+      throw new Error("Student does not exist!")
+    }
+  }
+
+
+
   return (
      <div>
           <NavBar />
@@ -51,7 +90,7 @@ function App() {
             <Route path='/' element={<Hero/>}/>
             <Route  path='/exams' element={<Exams examList={exams}/>}/>
             <Route path='/login' element={<Login/>}/>
-            <Route path='/createAccount' element={<CreateAccount/>}/>
+            {/* <Route path='/createAccount' element={<CreateAccount addNewStudent={createStudentAccount}/>}/> */}
           </Routes>
   
           {/* <CreateAccount/> */}
