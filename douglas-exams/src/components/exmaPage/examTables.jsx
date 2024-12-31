@@ -12,7 +12,7 @@ const ExamTable = ({ examData, selectedCourse }) => {
   const filterCourseList = (selectedCourse) => {
     const filteredExams = examData.filter((exam) => {
       const coursePrefix = exam.courseName.substring(0, 4);
-      return coursePrefix === selectedCourse; // Only show exams with matching prefix
+      return coursePrefix == selectedCourse;
     });
     setFilteredExams(filteredExams);
   };
